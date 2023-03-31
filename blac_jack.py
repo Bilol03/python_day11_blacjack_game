@@ -1,6 +1,6 @@
 import random
 from os import system
-
+from art import logo
 end_game = False
 
 def deal_card():
@@ -9,9 +9,6 @@ def deal_card():
     random_cards = random.choice(cards)
     return random_cards
 
-
-
-#  deal cards
 
 
 
@@ -117,6 +114,7 @@ while not end_game:
         end_game = True
     else:
         system("clear")
+        print(logo)
         res = calculate_score(user_cards, computer_cards)
         print(res)
 
